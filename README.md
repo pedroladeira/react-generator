@@ -10,10 +10,16 @@ Usage: createReactComponent [options] <name>
     -s, --styles [extension]  styles extension [default: css]
 ```
 
+## Install
+
+```
+npm i -g create-react-component
+```
+
 ## Example
 
 ```
-node createReactComponent.js Alert -s scss
+create-react-component Alert -s scss
 ```
 
 will create

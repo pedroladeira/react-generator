@@ -1,8 +1,12 @@
 {
   "name": "create-react-component",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generate react component with separate jsx template",
   "main": "createReactComponent.js",
+  "preferGlobal": "true",
+  "bin": {
+    "create-react-component" : "createReactComponent.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 var fs         = require("fs");
 var path       = require("path");
 var program    = require("commander");
@@ -38,6 +40,7 @@ var indexContent = `export default require("./${name}");
   fs.writeSync(fs.openSync(js, "w"), jsContent);
   fs.writeSync(fs.openSync(jsx, "w"), jsxContent);
   fs.writeSync(fs.openSync(index, "w"), indexContent);
+  console.log("Finished");
 
 }
 
