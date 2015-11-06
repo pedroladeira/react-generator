@@ -14,9 +14,12 @@ function run(name, options) {
   var js        = path.resolve(dir, name + ".js");
   var index     = path.resolve(dir, "index.js");
 
-var jsContent = `class ${name} extends React.Component {
+var jsContent = `import React    from "react";
+import template from "./${name}.jsx";
+
+class ${name} extends React.Component {
   render() {
-    return require("./${name}.jsx").call(this);
+    return template.call(this);
   }
 }
 
@@ -24,15 +27,19 @@ export default ${name};
 `;
 
 var jsxContent = `import "./${name}.${stylesExt}";
+import React from "react";
 
-export default function () {
-  return (
-    <div className="${changeCase.paramCase(name)}"></div>
-  );
-};
+const template = () => (
+  <div className="${changeCase.paramCase(name)}">
+    <h1>${name}</h1>
+  </div>
+);
+
+export default template;
 `;
 
-var indexContent = `export default require("./${name}");
+var indexContent = `import ${name} from "./${name}";
+export default ${name};
 `;
 
   fs.mkdirSync("./"+name);
