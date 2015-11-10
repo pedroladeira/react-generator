@@ -29,11 +29,13 @@ export default ${name};
 var jsxContent = `import "./${name}.${stylesExt}";
 import React from "react";
 
-const template = () => (
-  <div className="${changeCase.paramCase(name)}">
-    <h1>${name}</h1>
-  </div>
-);
+function template() {
+  return (
+    <div className="${changeCase.paramCase(name)}">
+      <h1>${name}</h1>
+    </div>
+  );
+};
 
 export default template;
 `;
