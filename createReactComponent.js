@@ -11,33 +11,24 @@ function run(name, options) {
   var stylesExt = options.styles || "css";
   var styles    = path.resolve(dir, name + "." + stylesExt)
   var jsx       = path.resolve(dir, name + ".jsx");
-  var js        = path.resolve(dir, name + ".js");
-  var index     = path.resolve(dir, "index.js");
+  var js        = path.resolve(dir, name + ".tsx");
+  var index     = path.resolve(dir, "index.ts");
 
-var jsContent = `import React    from "react";
-import template from "./${name}.jsx";
+var tsxContent = `import * as React from "react";
 
-class ${name} extends React.Component {
+interface ${name}Props {
+
+}
+
+class ${name} extends React.Component<${name}Props> {
+
   render() {
-    return template.call(this);
+    return <div>
+    </div>;
   }
 }
 
 export default ${name};
-`;
-
-var jsxContent = `import "./${name}.${stylesExt}";
-import React from "react";
-
-function template() {
-  return (
-    <div className="${changeCase.paramCase(name)}">
-      <h1>${name}</h1>
-    </div>
-  );
-};
-
-export default template;
 `;
 
 var indexContent = `import ${name} from "./${name}";
@@ -46,15 +37,14 @@ export default ${name};
 
   fs.mkdirSync("./"+name);
   fs.openSync(styles, "w");
-  fs.writeSync(fs.openSync(js, "w"), jsContent);
-  fs.writeSync(fs.openSync(jsx, "w"), jsxContent);
+  fs.writeSync(fs.openSync(js, "w"), tsxContent);
   fs.writeSync(fs.openSync(index, "w"), indexContent);
   console.log("Finished");
 
 }
 
 program
-  .version('0.0.1')
+  .version('0.0.5')
   .option('-s, --styles [extension]', 'styles extension [default: css]')
   .arguments('<name>')
   .action(run)
