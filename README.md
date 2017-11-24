@@ -1,7 +1,7 @@
-# Generate React Component
+# Generate React Component with Typescript
 
 ```
-Usage: createReactComponent [options] <name>
+Usage: createReactComponentTs [options] <name>
 
   Options:
 
@@ -13,21 +13,20 @@ Usage: createReactComponent [options] <name>
 ## Install
 
 ```
-npm i -g create-react-component
+npm i -g create-react-component-ts
 ```
 
 ## Example
 
 ```
-create-react-component Alert -s scss
+create-react-component-ts Button -s scss
 ```
 
 will create
 
 ```
-Alert
-├── Alert.js
-├── Alert.jsx
-├── Alert.scss
-└── index.js
+Button
+├── Button.ts
+├── Button.tsx
+└── Alert.scss
 ```
