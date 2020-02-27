@@ -6,8 +6,7 @@ const program    = require("commander");
 const _          = require("lodash");
 
 function run(name, options) {
-  console.log('options: ', options);
-
+  
   var dir       = path.resolve(name);
   var stylesExt = options.styles || "css";
   var styles    = path.resolve(dir, name + "." + stylesExt);
