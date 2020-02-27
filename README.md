@@ -1,4 +1,4 @@
-# React Generator
+# React Builder
 
 Generate your code components trough a simple command line
 
@@ -16,13 +16,13 @@ Usage: react-generate [options] <name>
 ## Install
 
 ```
-npm i -g react-generator
+npm i -g @pedroladeira/reactbuilder
 ```
 
 ## Example
 
 ```
-react-generator button -t -s scss
+reactbuilder button -t -s scss
 ```
 
 will create

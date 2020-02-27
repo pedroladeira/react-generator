@@ -1,11 +1,11 @@
 {
-  "name": "react-generator",
-  "version": "0.0.5",
+  "name": "@pedroladeira/reactbuilder",
+  "version": "1.0.0",
   "description": "Generate react components",
   "main": "generate-component.js",
-  "preferGlobal": "true",
+  "preferGlobal": true,
   "bin": {
-    "react-generator": "generate-component.js"
+    "reactbuilder": "generate-component.js"
   },
   "scripts": {
     "test": "node generate-component.js test -t"
@@ -13,7 +13,23 @@
   "author": "Pedro Ladeira <pedr.ladeira@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "commander": "^2.9.0",
+    "commander": "^4.1.1",
     "lodash": "^4.17.15"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedroladeira/react-generator.git"
+  },
+  "keywords": [
+    "react",
+    "generator",
+    "code",
+    "component",
+    "page"
+  ],
+  "bugs": {
+    "url": "https://github.com/pedroladeira/react-generator/issues"
+  },
+  "homepage": "https://github.com/pedroladeira/react-generator#readme"
 }
