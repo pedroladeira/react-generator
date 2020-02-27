@@ -1,19 +1,19 @@
 {
-  "name": "create-react-component-ts",
+  "name": "react-generator",
   "version": "0.0.5",
-  "description": "Generate react component with separate tsx template",
-  "main": "createReactComponent.js",
+  "description": "Generate react components",
+  "main": "generate-component.js",
   "preferGlobal": "true",
   "bin": {
-    "create-react-component-ts": "createReactComponent.js"
+    "react-generator": "generate-component.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node generate-component.js test -t"
   },
   "author": "Pedro Ladeira <pedr.ladeira@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "change-case": "^2.3.0",
-    "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "lodash": "^4.17.15"
   }
 }

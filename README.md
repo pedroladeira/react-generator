@@ -1,32 +1,35 @@
-# Generate React Component with Typescript
+# React Generator
+
+Generate your code components trough a simple command line
 
 ```
-Usage: createReactComponentTs [options] <name>
+Usage: react-generate [options] <name>
 
   Options:
 
     -h, --help                output usage information
     -V, --version             output the version number
     -s, --styles [extension]  styles extension [default: css]
+    -t, --typescript          use typescript style [default: false]
 ```
 
 ## Install
 
 ```
-npm i -g create-react-component-ts
+npm i -g react-generator
 ```
 
 ## Example
 
 ```
-create-react-component-ts Button -s scss
+react-generator button -t -s scss
 ```
 
 will create
 
 ```
-Button
-├── Button.ts
+button
+├── index.tsx
 ├── Button.tsx
-└── Alert.scss
+└── Button.scss
 ```
