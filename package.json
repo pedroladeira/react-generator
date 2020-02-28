@@ -1,14 +1,16 @@
 {
   "name": "@pedroladeira/reactbuilder",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Generate react components",
-  "main": "generate-component.js",
+  "main": "index.js",
   "preferGlobal": true,
   "bin": {
-    "reactbuilder": "generate-component.js"
+    "reactbuilder": "index.js"
   },
   "scripts": {
-    "test": "node generate-component.js test -t"
+    "test:dir": "node index.js foldername.filenametest -f tsx",
+    "test:tsx": "node index.js test -f tsx",
+    "test:js": "node index.js test -f js"
   },
   "author": "Pedro Ladeira <pedr.ladeira@gmail.com>",
   "license": "MIT",

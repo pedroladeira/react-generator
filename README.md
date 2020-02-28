@@ -19,10 +19,23 @@ Usage: react-generate [options] <name>
 npm i -g @pedroladeira/reactbuilder
 ```
 
-## Example
+## Create a React Typescript file Component
 
 ```
-reactbuilder button -t -s scss
+reactbuilder button -f tsx
+```
+
+## Create a Javascript File
+
+```
+reactbuilder button -f tsx
+```
+
+## Create a file inside a path
+
+```
+reactbuilder example.button -f tsx
+reactbuilder components.example.button -f tsx
 ```
 
 will create
